@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import api from "../utils/api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [error, setError] = useState(null);
@@ -77,9 +77,14 @@ const RegisterPage = () => {
           />
         </Form.Group>
         {error && <div className="red-error">{error}</div>}
-        <Button className="button-primary" type="submit">
-          회원가입
-        </Button>
+        <div className="btn-box">
+          <Button className="button-primary" type="submit">
+            회원가입
+          </Button>
+          <Link className="button-link" to="/">
+            취소
+          </Link>
+        </div>
       </Form>
     </div>
   );

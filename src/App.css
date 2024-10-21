@@ -91,3 +91,28 @@ button {
   color: red;
   margin-bottom: 1em;
 }
+
+.button-link {
+  padding: 0.375rem 0.75rem;
+  width: 5.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: lightblue;
+  color: #fff;
+  border: 1px solid lightblue;
+  text-align: center;
+  transition-property: background-color, border;
+  transition-duration: 0.35s;
+}
+
+.btn-box {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.button-link:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+}
