@@ -16,6 +16,14 @@ const RegisterPage = () => {
     const secpassword = e.target.secpassword.value;
 
     try {
+      // 안전성(?)을 위해 서버에도 밑과 같은 절차 로직을 만들었습니다
+      // 만들게 된 이유
+      // 1. 백엔드에서 Schema의 password를 required: true로 해놨지만, 어째서인지 클라이언트에서 password를 안보내도 가입이 가능해지는 현상을 찾음
+      // 2. 영어로 된 error message가 아닌 한글로 값을 반환
+      if (name === "" || password === "" || email === "") {
+        throw new Error("필요한 정보를 입력해 주세요");
+      }
+
       if (password !== secpassword) {
         throw new Error("패스워드가 일치하지 않습니다 다시 입력해주세요");
       }
