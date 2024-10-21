@@ -40,7 +40,10 @@ const RegisterPage = () => {
   }
   return (
     <div className="display-center">
-      <Form className="login-box" onSubmit={submitHandler}>
+      <Form
+        className="display-center__content display-center__content--reg"
+        onSubmit={submitHandler}
+      >
         <h1>회원가입</h1>
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label>Name</Form.Label>

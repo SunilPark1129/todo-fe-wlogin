@@ -34,7 +34,10 @@ const LoginPage = () => {
   }
   return (
     <div className="display-center">
-      <Form className="login-box" onSubmit={submitHandler}>
+      <Form
+        className="display-center__content display-center__content--login"
+        onSubmit={submitHandler}
+      >
         <h1>로그인</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

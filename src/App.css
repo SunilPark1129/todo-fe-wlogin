@@ -3,6 +3,10 @@ body {
   background-color: aliceblue !important;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 .todo-item {
   border: 1px solid lightblue;
   background-color: white;
@@ -58,8 +62,6 @@ button {
 }
 
 .login-box {
-  border: 1px solid lightblue;
-  max-width: 600px;
   width: 100%;
   background-color: white;
   padding: 20px;
@@ -69,11 +71,35 @@ button {
 }
 
 .display-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 4rem;
+  bottom: 4rem;
+  width: 100%;
+}
+
+.display-center__content {
+  display: flex;
+  max-width: 40rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid lightblue;
+  max-width: 600px;
+  padding: 2em;
+  flex-direction: column;
+}
+
+.display-center__content--login {
+  max-height: 20.8rem;
+}
+
+.display-center__content--reg {
+  max-height: 31.5rem;
 }
 
 .button-box {
@@ -118,7 +144,10 @@ button {
   border: 1px solid #0d6efd;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
+  .display-center__content--login {
+    max-height: 22.6rem;
+  }
   .button-box {
     flex-direction: column;
     align-items: center;
