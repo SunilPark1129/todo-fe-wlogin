@@ -56,9 +56,14 @@ const LoginPage = () => {
         </Form.Group>
         {error && <div className="red-error">{error}</div>}
         <div className="button-box">
-          <Button type="submit" className="button-primary">
-            Login
-          </Button>
+          <div className="btn-box">
+            <Button type="submit" className="button-primary w-50">
+              Login
+            </Button>
+            <Link className="button-link" to="/">
+              취소
+            </Link>
+          </div>
           <span>
             계정이 없다면? <Link to="/register">회원가입 하기</Link>
           </span>

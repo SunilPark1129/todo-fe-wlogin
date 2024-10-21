@@ -81,7 +81,7 @@ const RegisterPage = () => {
           <Button className="button-primary" type="submit">
             회원가입
           </Button>
-          <Link className="button-link" to="/">
+          <Link className="button-link" to="/login">
             취소
           </Link>
         </div>
