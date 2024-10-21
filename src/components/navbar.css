@@ -1,0 +1,60 @@
+* > a {
+  text-decoration: none;
+}
+
+* > a:hover {
+  color: unset;
+}
+
+.header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  gap: 0.5em;
+}
+
+.nav__logo {
+  color: rgb(116, 116, 116);
+  font-weight: bold;
+  padding: 0.5em 1em;
+  background-color: rgb(95, 101, 110);
+  color: #fff;
+  border-radius: 4px;
+}
+.nav__logo:hover {
+  color: #fff;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  background-color: lightblue;
+  padding: 0.5em 1em;
+  /* border-radius: 4px; */
+  border: 2px solid transparent;
+  font-size: 0.9em;
+}
+
+.nav__link:hover {
+  border: 2px solid lightblue;
+  color: lightblue;
+  background-color: #fff;
+}
+
+.nav__link--activate {
+  display: none;
+}

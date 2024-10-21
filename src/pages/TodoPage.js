@@ -57,7 +57,7 @@ const TodoPage = () => {
     }
   };
   return (
-    <Container>
+    <Container style={{ marginTop: "6em" }}>
       <Row className="add-item-row">
         <Col xs={12} sm={10}>
           <input
