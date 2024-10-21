@@ -12,13 +12,10 @@ const api = axios.create({
  */
 api.interceptors.request.use(
   (request) => {
-    console.log("urllll", process.env.REACT_APP_BACKEND_URL);
-
     console.log("Starting Request", request);
     return request;
   },
   function (error) {
-    console.log("errorrrr", process.env.REACT_APP_BACKEND_URL);
     console.log("REQUEST ERROR", error);
   }
 );
