@@ -1,10 +1,15 @@
 import axios from "axios";
 
+// 토큰이 있을시에 권한을 해더에 보내기
+const token = sessionStorage.getItem("token");
+
 const api = axios.create({
   baseURL: `${process.env.REACT_APP_BACKEND_URL}/api`,
   headers: {
     "Content-Type": "application/json",
-    authorization: "Bearer " + localStorage.getItem("token"),
+    ...(token && {
+      authorization: "Bearer " + sessionStorage.getItem("token"),
+    }),
   },
 });
 /**

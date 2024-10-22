@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import api from "../utils/api";
 
-const LoginPage = () => {
+const LoginPage = ({ user, setUser }) => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
-  const [user, setUser] = useState(null);
 
   async function submitHandler(e) {
     e.preventDefault();
@@ -24,6 +23,7 @@ const LoginPage = () => {
 
         // 토큰 값을 해더에 넣어서 GET을 해준다
         api.defaults.headers["authorization"] = `Bearer ${response.data.token}`;
+        console.log(response.data.token);
 
         setError(null);
         navigate("/");
@@ -31,6 +31,9 @@ const LoginPage = () => {
     } catch (error) {
       setError(error.message);
     }
+  }
+  if (user) {
+    return <Navigate to="/" />;
   }
   return (
     <div className="display-center">
@@ -57,16 +60,11 @@ const LoginPage = () => {
             placeholder="Password"
           />
         </Form.Group>
-        {error && <div className="red-error">{error}</div>}
+        <div className="red-error">{error}</div>
         <div className="button-box">
-          <div className="btn-box">
-            <Button type="submit" className="button-primary w-50">
-              Login
-            </Button>
-            <Link className="button-link" to="/">
-              취소
-            </Link>
-          </div>
+          <Button type="submit" className="button-primary">
+            Login
+          </Button>
           <span>
             계정이 없다면? <Link to="/register">회원가입 하기</Link>
           </span>

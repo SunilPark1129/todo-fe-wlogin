@@ -79,7 +79,7 @@ const RegisterPage = () => {
             placeholder="re-enter the password"
           />
         </Form.Group>
-        {error && <div className="red-error">{error}</div>}
+        <div className="red-error">{error}</div>
         <div className="btn-box">
           <Button className="button-primary" type="submit">
             회원가입

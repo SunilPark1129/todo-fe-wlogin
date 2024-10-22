@@ -11,6 +11,8 @@ const TodoPage = () => {
 
   const getTasks = async () => {
     const response = await api.get("/tasks");
+    console.log("taskList", response.data.data);
+
     setTodoList(response.data.data);
   };
   useEffect(() => {

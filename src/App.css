@@ -95,11 +95,11 @@ button {
 }
 
 .display-center__content--login {
-  max-height: 20.8rem;
+  max-height: 22.5rem;
 }
 
 .display-center__content--reg {
-  max-height: 31.5rem;
+  max-height: 33.5rem;
 }
 
 .button-box {
@@ -115,8 +115,12 @@ button {
 }
 
 .red-error {
+  display: flex;
   color: red;
+  align-items: center;
   margin-bottom: 1em;
+  height: 10rem;
+  width: 100%;
 }
 
 .button-link {
